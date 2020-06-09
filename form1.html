@@ -1,26 +1,245 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <style>
-  h2{
-    border : 3px solid black;
-  }
-  </style>
-  </head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
 
-  <body>
-    <form>
-      <h2>
-   <h2><b><u>COVID-19 TEST BOOKING FORM</u></b></h2>
-   <br>
-   <p><b> First Name : </b></p> <input type="text" />
-   <p><b> Last Name : </b></p> <input type="text" />
-   <p><b> Gender : </b></p> <input name="btn" type="radio" /> <i>Male</i> <input name="btn" type="radio" /> <i>Female</i>
-   <p><b> Date Of Birth : </b></p> <input type="date" />
-   <p><b> Contact Number : </b></p> <input type="number" />
-   <p><b> Email-Id : </b></p> <input type="email" />
-   <p><b>Address : </b></p> <textarea rows="08" cols="25"> </textarea>
-   <p><b><input type="submit"></b></p>
- </h2>
- </form>
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- icons file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Book Testing</title>
+  </head>
+  <body class="bg-light">
+    <!-- ******************navbar******************** -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #1F9EFF"> <!--nav bar color -->
+   <a class="navbar-brand" href="index.html">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+        <a class="nav-link ml-5 mr-5 fa fa-home" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ml-5 mr-5"><a class="nav-link fa fa-newspaper-o" href="https://www.mygov.in/covid-19/#updates" >News</a></li>
+      <li class="nav-item ml-3 mr-5"><a class="nav-link fa fa-globe" href="https://www.covid19india.org/" >Covid-19 Tracker</a></li>
+      <li class="nav-item ml-5 mr-5 "><a class="nav-link fa fa-user " href="#">About</a></li>
+      <li class="nav-item ml-5 mr-5"><a class="nav-link fa fa-info-circle" href="#Contact">More Info</a></li> 
+    </ul>
+  </div>
+</nav>
+<!-- ************************************** nav ends ********************************************* -->
+<!-- *************************************** form submission ************************************* -->
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2 class="display-3">Covid-19 Test Booking</h2>
+        <p class="lead">Submit your details truthfully as it is essential to find nearest testing centre, false details can result in cancellation of application.</p>
+      </div>
+        <div class="col-md-8 order-md-1 container ">
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name<span class="text-muted">*</span></label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" >
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email<span class="text-muted">*</span></label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+                <input type="text" class="form-control" id="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your email is required. Please enter a valid email address for booking updates.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="Moblie">Moblie <span class="text-muted">*</span></label>
+              <input type="number" class="form-control" id="Mobile" placeholder="Mobile no.">
+              <div class="invalid-feedback">
+                Please enter a valid mobile number for booking updates.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Address line 1<span class="text-muted">*</span></label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your current address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Address Line 2 <span class="text-muted">*</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country<span class="text-muted">*</span></label>
+                <select class="custom-select d-block w-100" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>India</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">State<span class="text-muted">*</span></label>
+                <select class="custom-select d-block w-100" id="state" required>
+                  <option value="">Choose...</option>
+                  <option>Andaman and Nicobar</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chandigarh</option>
+                  <option>Chhattisgarh</option>
+                  <option>Daman and Diu</option>
+                  <option>Delhi</option>
+                  <option>Goa</option>
+                  <option>Gujrat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jammu and Kashmir</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerla</option>
+                  <option>Ladakh</option>
+                  <option>Lakshadweep</option>
+                  <option>Madhya Pradesh</option> 
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Panjab</option>
+                  <option>Puducherry</option>
+                  <option>Rajsthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West bengal</option>
+                  
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Zip<span class="text-muted">*</span></label>
+                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <h4 class="mb-3">Gender</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Male</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Female</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="paypal">Other</label>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+<!-- ******************************* footer ******************************************************* -->
+ <footer id ="Contact" class="footer mt-5"><div class="container">
+    <h2 class="display-4 lead">More Info</h2>
+    <hr>
+    <a id="icons" href="https://www.instagram.com/mygovindia/" class="fa fa-instagram ml-3"></a>
+    <a id="icons" href="https://twitter.com/mygovindia" class="fa fa-twitter ml-3"></a>
+    <a id="icons" href="https://www.facebook.com/MyGovIndia/" class="fa fa-facebook ml-3"></a>
+    <a id="icons" href="#" class="fa fa-envelope ml-3"></a>
+    <p  id="copyright">&copy Copyright 2020</p>
+    
+  </div></footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
