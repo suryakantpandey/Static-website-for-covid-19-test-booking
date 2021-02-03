@@ -1,2 +1,4 @@
 # Static website for covid test booking
-  this is just a front-end website 
+  This is just a front-end website \
+  you can view it from the link given below  \
+  https://suryakantpandey.github.io/Static-website-for-covid-19-test-booking/
